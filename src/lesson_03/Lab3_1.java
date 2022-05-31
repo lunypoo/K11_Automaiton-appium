@@ -1,4 +1,4 @@
-package lab_03;
+package lesson_03;
 
 public class Lab3_1 {
     //count how many odd,even number

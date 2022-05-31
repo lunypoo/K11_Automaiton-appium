@@ -1,4 +1,4 @@
-package lab_02;
+package lesson_02;
 
 public class BitwiseOperator {
 
