@@ -36,9 +36,8 @@ public class WhiteLoopLearning {
 * */
 
 // 1 phan cua bai l
-package Lab_03;
+package lab_03;
 
-import java.awt.*;
 import java.security.SecureRandom;
 import java.util.Scanner;
 

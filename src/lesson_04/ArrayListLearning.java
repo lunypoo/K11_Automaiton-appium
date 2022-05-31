@@ -1,6 +1,7 @@
-package Lesson_04;
+package lesson_04;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayListLearning {
@@ -25,6 +26,8 @@ public class ArrayListLearning {
          */
 
         List<Integer> myArrayList = new ArrayList<>();
+        //khong add them duoc phan tu. chi duoc phep lay ra de xu ly
+        List<Integer> myArrayList2 = Arrays.asList(1,2,3);
 
         //CRUD, add
         myArrayList.add(1); //index 0
@@ -33,16 +36,19 @@ public class ArrayListLearning {
         //ptu dau tien start = index so 0, end = length -1
         myArrayList.add(0,3); //chi dinh input so 3 o index 0 => day so 1 sang index #
 
+     //   myArrayList2.add(4);
+// muon thay doi gtri index
         for (int index = 0; index < myArrayList.size(); index++) {
             System.out.println(myArrayList.get(index));
             
         }
-       /*
+       /*chi lay gtri ra thoi, khong muon thay doi gtri
         for (int integer : myArrayList) {
 
             System.out.println(integer);
         }
 
         */
+        System.out.println(myArrayList);
     }
 }

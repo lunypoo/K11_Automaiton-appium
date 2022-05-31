@@ -1,6 +1,4 @@
-package Lab_03;
-
-import java.util.Scanner;
+package lab_03;
 
 public class Lab3_2 {
     //find max number

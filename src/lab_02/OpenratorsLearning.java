@@ -1,4 +1,4 @@
-package Lab_02;
+package lab_02;
 
 public class OpenratorsLearning {
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package Lab_03;
-
-import com.sun.corba.se.spi.orbutil.fsm.Input;
+package lab_03;
 
 public class Lab3_3 {
 //sort array

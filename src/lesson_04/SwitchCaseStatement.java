@@ -1,4 +1,4 @@
-package Lesson_04;
+package lesson_04;
 //Dieu kien re nhanh
 //dung switchcase khi set 1 cap du lieu nao do cung 1 loai du lieu
 

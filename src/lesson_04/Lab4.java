@@ -1,11 +1,8 @@
-package Lesson_04;
+package lesson_04;
 
-import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import static java.util.Arrays.asList;
 
 public class Lab4 {
 
