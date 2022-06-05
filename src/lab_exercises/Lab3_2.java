@@ -1,4 +1,4 @@
-package lesson_03;
+package lab_exercises;
 
 public class Lab3_2 {
     //find max number

@@ -1,4 +1,4 @@
-package lesson_04;
+package lab_exercises;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public class Lab4 {
             arrNumber.add(7);
             arrNumber.add(14);
             arrNumber.add(22);
-            System.out.println("A Number Arraylist: "+ arrNumber);
+            System.out.println("A Number Arraylist: " + arrNumber);
 
             switch (options) {
                 case 1:
