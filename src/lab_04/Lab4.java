@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_04;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_06;
 //https://github.com/sdetpro-blog/java-oop-exercises/blob/main/appium-k9/LAB_06.md
 
 import java.util.Scanner;

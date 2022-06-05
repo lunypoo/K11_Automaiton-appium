@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_06;
 //String myStr = "100 minutes";
 //extract digit character from that String
 

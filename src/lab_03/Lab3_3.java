@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_03;
 
 public class Lab3_3 {
 //sort array

@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_06;
 
 //String myPassword = "password123";
 //Allow user to input maximum 3 times

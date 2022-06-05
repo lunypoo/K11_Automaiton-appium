@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_03;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package lab_exercises;
+package lab_06;
 
 //String url = "https://google.com";
 //Check http OR https; domain name, .com OR .net
