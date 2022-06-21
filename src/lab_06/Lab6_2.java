@@ -18,14 +18,16 @@ public class Lab6_2 {
             System.out.print("Enter password: ");
             guessPass = scanner.nextLine();
 
-            if (guessPass == myPass){
+            if (guessPass.equals(myPass)){
                 System.out.println("Login successfully");
                 break;
+            }else{
+               System.out.println("Enter the wrong password more than 3 times!");
             }
             guessingTime++;
 
         } while (guessingTime < 3);
-        System.out.println("Enter the wrong password more than 3 times!");
+        System.out.println("See you again!");
     }
 
 

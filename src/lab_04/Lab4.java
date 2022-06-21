@@ -1,86 +1,82 @@
 package lab_04;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Lab4 {
 
-    public static void printSimpleMenu() {
-        System.out.println("----MENU----");
-        System.out.println("1. Add number into ArrayList");
-        System.out.println("2. Print number");
-        System.out.println("3. Get maximum number");
-        System.out.println("4. Get minimum number");
-        System.out.println("5. Search number");
+    private static int myArr, newArr[];
+
+    public static void Addnumber() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter arraylist: ");
+        Lab4.myArr = scanner.nextInt();
+        Lab4.newArr = new int[myArr];
+        for (int i = 0; i < myArr; i++) {
+
+            System.out.print("newArr[" + i + "]=");
+            newArr[i] = scanner.nextInt();
+        }
     }
 
-    public static int getUserOption(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please select option: ");
-        return scanner.nextInt();
+    public static void Print() {
+        System.out.println("New array list: ");
+        for (int i = 0; i < myArr; i++) {
+            //in cac ptu tren cung 1 dong
+            System.out.print(Lab4.newArr[i] + "\t");
+        }
+    }
+
+    public static void Maximum() {
+        System.out.printf("Original array: " + Arrays.toString(Lab4.newArr) + "\t");
+        Arrays.sort(Lab4.newArr);
+        System.out.println("\nArray ascending: " + Arrays.toString(Lab4.newArr) + "\t");
+
+    }
+
+    public static void Minium() {
+        System.out.printf("Original array: " + Arrays.toString(Lab4.newArr) + "\t");
+        Arrays.sort(new int[][]{Lab4.newArr}, Collections.reverseOrder());
+        System.out.println("\nArray descending: " + Arrays.toString(Lab4.newArr) + "\t");
+
     }
 
     public static void main(String[] args) {
 
-        int options = getUserOption();
-            printSimpleMenu();
-            List<Integer> arrNumber = new ArrayList<>();
-            arrNumber.add(4);
-            arrNumber.add(7);
-            arrNumber.add(14);
-            arrNumber.add(22);
-            System.out.println("A Number Arraylist: " + arrNumber);
+        Scanner scanner = new Scanner(System.in);
+        int userInput;
 
-            switch (options) {
+        do {
+            System.out.println("\n1. Add number into ArrayList");
+            System.out.println("2. Print numbers");
+            System.out.println("3. Get maximum number");
+            System.out.println("4. Get minimum number");
+            System.out.println("5. search number");
+            System.out.println("--------------------------------");
+
+            System.out.print("user input: ");
+
+            userInput = scanner.nextInt();
+
+            switch (userInput) {
                 case 1:
-                    arrNumber.add(3, 9);
-                    System.out.println("Phan tu them moi: " + arrNumber.get(1));
+                    Addnumber();
                     break;
 
                 case 2:
-                    System.out.println("2. Print number");
-                    int index;
-                    for (index = 0; index < arrNumber.size(); index++) {
-
-                        arrNumber.get(index);
-                        System.out.println(arrNumber.get(index));
-                    }
+                    Print();
                     break;
 
                 case 3:
-                    System.out.println("3. Get maximum number");
-                    int maxArray;
-                    maxArray = arrNumber.get(0);
-                    for (int i = 0; i < arrNumber.size(); i++) {
-                        if (arrNumber.get(i) > maxArray) {
-                            maxArray = arrNumber.get(i);
-                        }
-                    }
-                    System.out.println("MaxArray: " + maxArray);
+                    Maximum();
                     break;
-
                 case 4:
-                    System.out.println("4. Get minimun number");
-                    int minArray;
-                    minArray = arrNumber.get(0);
-                    for (int i = 0; i < arrNumber.size(); i++) {
-                        if (arrNumber.get(i) < minArray) {
-                            minArray = arrNumber.get(i);
-                        }
-                    }
-                    System.out.println("MinArray: " + minArray);
+                    Minium();
                     break;
-
                 default:
-                    System.out.println("Invalid date");
-
+                    System.out.println("Error value!");
+                    System.exit(0);
             }
-
-
-        }
-
-
+        } while (userInput != 0);
     }
-
-
+}
