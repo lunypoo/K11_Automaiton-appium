@@ -8,8 +8,8 @@ public class Tiger extends Animal {
         super(TIGER_MAX_SPEED);
     }
 
-    public static void main(String[] args) {
-        Animal tiger = new Tiger();
-        System.out.println(tiger.getSpeed());
+    @Override
+    public String getName() {
+        return Tiger.class.getSimpleName();
     }
 }

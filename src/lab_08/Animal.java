@@ -1,7 +1,5 @@
 package lab_08;
 
-import java.security.SecureRandom;
-
 public class Animal {
 
     private String name;
@@ -15,19 +13,24 @@ public class Animal {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public int getSpeed() {
-        return this.speed;
+        return speed;
     }
 
     public boolean isFlyable() {
-        return this.flyable;
+        return flyable;
     }
 
+    @Override
     public String toString() {
-        return "Animal_08_1{name= '" + this.name + '\'' + ", speed = " + this.speed + ", flyable = " + this.flyable + '}';
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", speed=" + speed +
+                ", flyable=" + flyable +
+                '}';
     }
 
     public static class Builder {
@@ -35,51 +38,25 @@ public class Animal {
         private int speed;
         private boolean flyable;
 
-        public Builder() {
-        }
-
-        public void setName(String name) {
+        public Builder setName(String name) {
             this.name = name;
+            return this;
         }
 
-        public void setSpeed(int speed) {
+        public Builder setSpeed(int speed) {
             this.speed = speed;
+            return this;
         }
 
-        public void setFlyable(boolean flyable) {
+        public Builder setFlyable(boolean flyable) {
             this.flyable = flyable;
+            return this;
         }
 
         public Animal build() {
             return new Animal(this);
         }
+
     }
 
-    public static void main(String[] args) {
-
-        Builder animalBuilder = new Builder();
-        animalBuilder.setName("Eagle");
-        animalBuilder.setSpeed((new SecureRandom()).nextInt(320));
-        animalBuilder.setFlyable(true);
-        Animal Eagle = animalBuilder.build();
-        System.out.println(Eagle);
-
-        animalBuilder.setName("Falcon");
-        animalBuilder.setSpeed((new SecureRandom()).nextInt(240));
-        animalBuilder.setFlyable(true);
-        Animal Falcon = animalBuilder.build();
-        System.out.println(Falcon);
-
-        animalBuilder.setName("Tiger");
-        animalBuilder.setSpeed((new SecureRandom()).nextInt(100));
-        animalBuilder.setFlyable(false);
-        Animal Tiger = animalBuilder.build();
-        System.out.println(Tiger);
-
-        animalBuilder.setName("Snake");
-        animalBuilder.setSpeed((new SecureRandom()).nextInt(19));
-        animalBuilder.setFlyable(false);
-        Animal Snake = animalBuilder.build();
-        System.out.println(Snake);
-    }
 }

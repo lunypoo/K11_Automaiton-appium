@@ -8,8 +8,8 @@ public class Horse extends Animal {
         super(HORSE_MAX_SPEED);
     }
 
-    public static void main(String[] args) {
-        Animal horse = new Horse();
-        System.out.println(horse.getSpeed());
+    @Override
+    public String getName() {
+        return Horse.class.getName();
     }
 }
